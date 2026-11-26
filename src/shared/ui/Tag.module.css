@@ -1,0 +1,34 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition:
+    transform 0.2s,
+    background 0.2s,
+    color 0.2s;
+}
+
+.green {
+  background: var(--green-soft);
+  color: var(--green);
+}
+.green.interactive:hover {
+  transform: translateY(-2px);
+  background: var(--green);
+  color: #fff;
+}
+
+.terracotta {
+  background: var(--terracotta-soft);
+  color: var(--terracotta-dark);
+}

@@ -1,0 +1,48 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  background: rgba(34, 40, 31, 0.55);
+  backdrop-filter: blur(4px);
+  padding: 20px;
+  animation: fadeIn 0.3s;
+}
+
+.sheet {
+  position: relative;
+  width: min(900px, 100%);
+  height: min(92vh, 1100px);
+  background: var(--surface);
+  border-radius: 18px;
+  overflow: hidden;
+  animation: fadeUp 0.4s var(--ease);
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--green);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}

@@ -1,0 +1,70 @@
+.download {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  background: var(--terracotta);
+  color: #fff;
+}
+.download::after {
+  content: 'CV';
+  position: absolute;
+  right: -10px;
+  bottom: -40px;
+  font-family: var(--font-serif);
+  font-size: 150px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.12);
+  line-height: 1;
+}
+.download h3 { font-size: 24px; }
+.download p { margin: 6px 0 20px; color: #fbe2d5; font-size: 15px; }
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+}
+.card h3 { font-size: 17px; margin-bottom: 14px; }
+
+.language { margin-bottom: 12px; }
+.language:last-child { margin-bottom: 0; }
+.languageHead {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.languageHead span { color: var(--muted); }
+.bar {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--green-soft);
+  overflow: hidden;
+}
+.barFill {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--green), var(--green-mid));
+  transition: width 1.4s var(--ease);
+}
+
+.hobbies {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  color: var(--muted);
+}
+.hobbies li { display: flex; gap: 10px; padding: 6px 0; }

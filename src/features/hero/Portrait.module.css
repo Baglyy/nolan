@@ -1,0 +1,70 @@
+.portrait {
+  position: relative;
+  justify-self: center;
+}
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.frame {
+  position: relative;
+  width: 320px;
+  height: 320px;
+}
+.frame::before {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
+  background: conic-gradient(from 0deg, var(--green), var(--terracotta), var(--sand), var(--green));
+  animation: spin 12s linear infinite;
+}
+.photo {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
+  border: 6px solid var(--bg);
+}
+
+.badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 14px 30px -14px rgba(34, 40, 31, 0.35);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  animation: float 5s ease-in-out infinite;
+}
+.badgeIcon { font-size: 22px; }
+.badge small {
+  display: block;
+  font-weight: 500;
+  color: var(--muted);
+  font-size: 12px;
+}
+.badgeTop { top: 10px; left: -70px; animation-delay: -1s; }
+.badgeBottom { bottom: 30px; right: -60px; animation-delay: -3s; }
+
+@keyframes float { 50% { transform: translateY(-12px); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 900px) {
+  .portrait { order: -1; }
+  .frame { width: 230px; height: 230px; }
+  .badgeTop { left: -40px; top: 0; }
+  .badgeBottom { right: -40px; bottom: 10px; }
+}
+@media (max-width: 600px) {
+  .badge { font-size: 12px; padding: 8px 12px; }
+  .badgeIcon { font-size: 18px; }
+  .badgeTop { left: -24px; }
+  .badgeBottom { right: -24px; }
+}

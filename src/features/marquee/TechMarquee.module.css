@@ -1,0 +1,31 @@
+.marquee {
+  margin-top: 64px;
+  padding: 18px 0;
+  background: var(--green);
+  color: #fff;
+  transform: rotate(-1.5deg);
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: scroll 28s linear infinite;
+}
+
+.item {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.item::after {
+  content: '✦';
+  color: var(--peach);
+  font-size: 16px;
+}
+
+@keyframes scroll { to { transform: translateX(-50%); } }

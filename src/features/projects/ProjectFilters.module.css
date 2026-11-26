@@ -1,0 +1,26 @@
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.button {
+  font: 500 14px var(--font-sans);
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--bg);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.button:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+.active,
+.active:hover {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}

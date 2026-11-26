@@ -1,0 +1,30 @@
+/* Charte graphique : crème, vert forêt, terracotta. Pas de bleu, thème clair. */
+:root {
+  --bg: #f7f3ec;
+  --surface: #fffdf9;
+  --ink: #22281f;
+  --muted: #5f6659;
+  --line: #e3dccf;
+  --green: #2f5d46;
+  --green-dark: #244a37;
+  --green-mid: #4f8063;
+  --green-soft: #e4ece4;
+  --terracotta: #b8613d;
+  --terracotta-dark: #8e4526;
+  --terracotta-soft: #f5e3d8;
+  --peach: #f2c9b4;
+  --sand: #ead9b8;
+  --online: #4c9a6a;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Fraunces', Georgia, serif;
+
+  --radius: 16px;
+  --radius-lg: 20px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --shadow-soft: 0 20px 40px -30px rgba(34, 40, 31, 0.4);
+  --shadow-lift: 0 24px 40px -28px rgba(34, 40, 31, 0.5);
+
+  --nav-height: 70px;
+  color-scheme: light;
+}

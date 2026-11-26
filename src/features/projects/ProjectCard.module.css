@@ -1,0 +1,117 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+.card:hover {
+  box-shadow: 0 30px 50px -30px rgba(34, 40, 31, 0.55);
+}
+.featured {
+  grid-column: span 2;
+}
+
+.visual {
+  position: relative;
+  height: 150px;
+  display: grid;
+  place-items: center;
+  font-size: 54px;
+  overflow: hidden;
+}
+.featured .visual { height: 190px; }
+
+/* Halo lumineux qui suit la souris (variables posées par useTilt) */
+.visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.45), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.card:hover .visual::after { opacity: 1; }
+
+.emoji { transition: transform 0.5s var(--ease); }
+.card:hover .emoji { transform: scale(1.18) rotate(-6deg); }
+
+.forest { background: linear-gradient(135deg, #2f5d46, #4f8063); }
+.sand { background: linear-gradient(135deg, #e8c9a0, #d79a6c); }
+.sage { background: linear-gradient(135deg, #cfe0cf, #9fc2a7); }
+.blush { background: linear-gradient(135deg, #f5e3d8, #e7b59b); }
+.terracotta { background: linear-gradient(135deg, #b8613d, #d9875f); }
+
+.ribbon {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--green);
+}
+
+.body {
+  padding: 24px 26px 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.language {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.languageDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--terracotta);
+  transition: all 0.3s var(--ease);
+}
+.card:hover .arrow {
+  background: var(--terracotta);
+  color: #fff;
+  border-color: var(--terracotta);
+  transform: rotate(45deg);
+}
+.title { font-size: 23px; margin-bottom: 8px; }
+.description {
+  color: var(--muted);
+  margin: 0 0 18px;
+  flex: 1;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .featured { grid-column: auto; }
+}
